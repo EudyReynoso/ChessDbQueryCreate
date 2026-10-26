@@ -19,13 +19,11 @@ También incluye procedimientos almacenados para registrar, consultar, actualiza
 
 ## 🧩 Diagrama entidad-relación
 
-**Pendiente:** generar el diagrama en SQL Server Management Studio después de crear la base de datos y agregar aquí una captura.
+El diagrama muestra las tablas y llaves foráneas que existen actualmente en el script. `Ordenes` no tiene una relación definida con `OrdenElementos` en el esquema actual. `sysdiagrams` es una tabla de soporte de SSMS para almacenar diagramas; no forma parte de las operaciones de la quesería.
 
-Guarda la imagen futura como `docs/diagrama-entidad-relacion.png` y luego habilita esta línea:
-
-```markdown
 ![Diagrama entidad-relación de ChessDB](docs/diagrama-entidad-relacion.png)
-```
+
+*Diagrama entidad-relación de la base de datos de la quesería.*
 
 ## 🛠️ Requisitos
 
@@ -37,10 +35,10 @@ Guarda la imagen futura como `docs/diagrama-entidad-relacion.png` y luego habili
 
 1. Inicia tu instancia local de SQL Server y conéctate desde SSMS.
 2. Abre `ChessDB.sql`.
-3. Revisa las rutas `FILENAME` del inicio del script. Apuntan a una carpeta de SQL Server Express de otra computadora; cámbialas por rutas válidas en tu PC o quita esas rutas para que SQL Server use sus ubicaciones predeterminadas.
+3. El script usa las ubicaciones predeterminadas de archivos de SQL Server para crear la base de datos.
 4. Confirma que no exista ya una base llamada `ChessDB`: el script usa `CREATE DATABASE` y no está preparado para ejecutarse varias veces.
 5. Ejecuta el script con **F5**.
-6. Cuando termine, crea el diagrama desde **Database Diagrams** en SSMS, guarda una captura y añádela a `docs/`.
+6. Cuando termine, abre **Database Diagrams** en SSMS para revisar el modelo. La captura incluida en `docs/` corresponde al diagrama actual.
 
 El script comienza en `master`, crea `ChessDB`, define las tablas, llaves foráneas y procedimientos almacenados, y al final vuelve a `master`.
 
@@ -50,4 +48,4 @@ El repositorio contiene el script de base de datos, pero no una aplicación ni r
 
 ---
 
-Práctica académica de gestión de una quesería · Diagrama entidad-relación pendiente
+Práctica académica de gestión de una quesería · Diagrama entidad-relación incluido
