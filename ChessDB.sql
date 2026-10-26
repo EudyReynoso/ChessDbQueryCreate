@@ -1,12 +1,7 @@
 USE [master]
 GO
 /****** Object:  Database [ChessDB]    Script Date: 6/8/2021 5:45:21 p. m. ******/
-CREATE DATABASE [ChessDB]
- CONTAINMENT = NONE
- ON  PRIMARY
-( NAME = N'ChessDB', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\ChessDB.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
- LOG ON
-( NAME = N'ChessDB_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\ChessDB_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+CREATE DATABASE [ChessDB];
 GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
